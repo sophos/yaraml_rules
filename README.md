@@ -1,4 +1,4 @@
-# Sophos AI YaraML Rules Repository -- Security ML models compiled to Yara rules for easy deployment
+# Sophos AI YaraML Rules Repository
 
 ## Wait, what is this?
 
