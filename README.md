@@ -32,6 +32,10 @@ condition:
 }
 ```
 
+Here's the ROC curve this rule achieves.  You can move around in ROC space by changing the threshold after the '>' sign at the end of the file.
+![Powershell ROC curve](https://github.com/inv-ds-research/yaraml_rules/blob/master/generic_powershell_detector_jan28_2020/validation_roc_with_recommended_thresholds.png?raw=true)
+
+
 ## Why?
 
 Because ML rules are a good complement to hand-written rules.  Machine learning has some nice properties: let's you dial a detection threshold to trade off between false positives and false negatives, and often produces superior detection rates when it has a lot of training data.  When we only have a few examples of a malicious family, expert humans can probably write better rules.
