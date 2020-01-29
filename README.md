@@ -1,7 +1,7 @@
 # Sophos AI YaraML Rules Repository
 *Questions, concerns, ideas, results, feedback appreciated, please email joshua.saxe@sophos.com*
 
-A repository of Yara rules that created automatically as translations of machine learning models.  Each directory has a rule and accompanying metadata: hashes of files used in training, and an accuracy diagram (a ROC curve).
+A repository of Yara rules created automatically as translations of machine learning models.  Each directory will have a rule and accompanying metadata: hashes of files used in training, and an accuracy diagram (a ROC curve).
 
 Here's an example ML (logistic regression) rule, for detecting malicious powershell:
 
