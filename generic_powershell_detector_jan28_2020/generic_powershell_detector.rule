@@ -1,9 +1,29 @@
+
 // Copyright 2020  Sophos Ltd.  All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 // Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
+
+///////////////////////////////////////////////////////////////////////////////////////
+// N.B.!
+// This is a Yaraified logistic regression model for detecting malicious powershell
+// regularized with a L1 penalty.
+//
+// What the model does is observe a host of word token features and then sum up
+// their counts, multiplying them each by learned coefficients.
+//
+// At the bottom of this file, you'll find a '>' sign followed by the number 0.
+// If you'd like this detector to be more aggressive (more FP prone, with a higher
+// detection rate, set that number of -1.941, which will yield an expected false
+// positive rate of 2% on powershell script files.  On a test set, this threshold
+// achieved 99% detection.
+
+// Other thresholds:
+// 1.024, 1% FPR / 95% detection rate,
+// 5.582, 0.2% FPR, 70% detection rate.
+///////////////////////////////////////////////////////////////////////////////////////
 
 rule Generic_Powershell_Detector
 {
