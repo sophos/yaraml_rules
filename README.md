@@ -31,7 +31,7 @@ condition:
 > 0
 }
 ```
-Here's the ROC curve this rule achieves.  You can move around in ROC space by changing the threshold after the '>' sign at the end of the file.
+Here's the ROC curve this rule achieves.  You can move around in ROC space by changing the threshold after the '>' sign at the end of the file.  N.B. *For this particular rule, you'll need to make sure you're scanning powershell script files* -- it'll FP on binary files, because it wasn't trained on these.
 
 
 ![Powershell ROC curve](https://github.com/inv-ds-research/yaraml_rules/blob/master/generic_powershell_detector_jan28_2020/validation_roc_with_recommended_thresholds.png?raw=true)
