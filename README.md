@@ -1,7 +1,7 @@
 # Sophos AI YaraML Rules Repository
 *Questions, concerns, ideas, results, feedback appreciated, please email joshua.saxe@sophos.com*
 
-A repository of Yara rules that created automatically as translations of machine learning models.  Each directory has a rule and accompanying metadata: hashes of files used in training, an accuracy diagram (a ROC curve), and a description of how the training data was gathered and what the rule is intended to detect.
+A repository of Yara rules created automatically as translations of machine learning models.  Each directory will have a rule and accompanying metadata: hashes of files used in training, and an accuracy diagram (a ROC curve).
 
 Here's an example ML (logistic regression) rule, for detecting malicious powershell:
 
@@ -31,6 +31,11 @@ condition:
 > 0
 }
 ```
+Here's the ROC curve this rule achieves.  You can move around in ROC space by changing the threshold after the '>' sign at the end of the file.  N.B. *For this particular rule, you'll need to make sure you're scanning powershell script files* -- it'll FP on binary files, because it wasn't trained on these.
+
+
+![Powershell ROC curve](https://github.com/inv-ds-research/yaraml_rules/blob/master/generic_powershell_detector_jan28_2020/validation_roc_with_recommended_thresholds.png?raw=true)
+
 
 ## Why?
 

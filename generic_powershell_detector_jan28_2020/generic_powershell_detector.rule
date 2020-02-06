@@ -16,7 +16,7 @@
 //
 // At the bottom of this file, you'll find a '>' sign followed by the number 0.
 // If you'd like this detector to be more aggressive (more FP prone, with a higher
-// detection rate, set that number of -1.941, which will yield an expected false
+// detection rate), set that number of -1.941, which will yield an expected false
 // positive rate of 2% on powershell script files.  On a test set, this threshold
 // achieved 99% detection.
 
