@@ -14,12 +14,12 @@ setuptools.setup(
     url="https://ai.sophos.com",
     packages=setuptools.find_packages(),
     install_requires=[
-    "networkx>=1.11",
-    "joblib>=0.14.1",
-    "numpy>=1.13.3",
-    "scipy>=0.19.0",
-    "pefile>=2019.4.18",
-    "scikit_learn>=0.23.2"
+        "joblib==0.17.0",
+        "networkx==2.5",
+        "numpy==1.19.4",
+        "pefile==2019.4.18",
+        "scikit-learn==0.23.2",
+        "scipy==1.5.4"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
