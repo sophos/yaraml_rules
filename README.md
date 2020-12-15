@@ -53,3 +53,14 @@ Because sometimes we want to use ML models to do blue team work but only Yara is
 ## How well maintained is this code base?
 
 We're providing research code here but will happily respond to questions and bug reports.  We want your feedback and we want to make this tool useful to the community.
+
+## How do I cite YaraML?
+
+@misc{Saxe2020,
+  author = {Saxe, Joshua},
+  title = {YaraML},
+  year = {2020},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/sophos-ai/yaraml_rules/}}
+}
