@@ -166,6 +166,7 @@ def main():
     classifier.fit(X,y)
 
     # validate model
+    roc_lines = []
     if args.val_percent > 0:
         X_val = vectorizer.transform(X_val)
         if type(classifier) == RandomForestClassifier:
@@ -181,7 +182,9 @@ def main():
             if thr > 0 and thr < 1:
                 if args.model_type == "logisticregression":
                     thr = -1 * math.log(1.0/thr-1)
-                log("At a threshold of {} expect FPR {} and TPR {}".format(thr,f,t))
+                roc_line = "At a threshold of {} expect FPR {} and TPR {}".format(thr,f,t)
+                log(roc_line)
+                roc_lines.append(roc_line)
                 tpr_fpr_tuples.append((f,t,thr))
 
         if len(tpr_fpr_tuples) > 5:
@@ -198,6 +201,7 @@ def main():
     #print rule
     log("Writing rule to disk")
     open(args.rule_name+".yara","w+").write(rule)
+    open(args.rule_name+"_fpr_tpr_data.txt","w+").write("\n".join(roc_lines))
 
 if __name__ == '__main__':
     main()

@@ -78,7 +78,7 @@ def get_features(path,splitstrings=True,maxtokenlen=64,mintokenlen=16,sample_rat
             if len(string) <= maxtokenlen and len(string) >= mintokenlen:
                 hv = hash(string) % 10000
                 if (hv / 10000.0) <= sample_rate:
-                    string_features["$"+string] += 1.0
+                    string_features['$'+string] += 1.0
 
         string_features.update(special_features)
         return string_features

@@ -22,7 +22,7 @@ def convert_linear(rulename,estimator,feature_names,malware_threshold=0.5,privat
 
     feature_weights.sort(key=lambda x:x[1],reverse=True)
 
-    stringdata = "\n".join(["\t$s{} = {:20} fullword // weight: {:.4}".format(i,json.dumps(j[0]),j[1]) for i,j in enumerate(feature_weights)])
+    stringdata = "\n".join(["\t$s{} = {:20} fullword // weight: {:.4}".format(i,json.dumps(j[0][1:]),j[1]) for i,j in enumerate(feature_weights)])
 
     conditiondata = []
     for idx, (feature, coef) in enumerate(feature_weights):
