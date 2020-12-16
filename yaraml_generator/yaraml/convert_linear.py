@@ -27,6 +27,7 @@ def convert_linear(rulename,estimator,feature_names,malware_threshold=0.5,privat
     conditiondata = []
     for idx, (feature, coef) in enumerate(feature_weights):
         conditiondata.append("(#s{0} * {1:.3f})".format(idx,coef))
+    log("DEBUG: Linear model bias term is: " + str(bias))
     if abs(bias) > 0.001:
         conditiondata.append("({0:.3f})".format(bias))
     conditions = "\t"+"(" + " + ".join(conditiondata) + ")"

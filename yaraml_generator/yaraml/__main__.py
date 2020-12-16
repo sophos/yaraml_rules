@@ -180,7 +180,7 @@ def main():
 
         for f,t,thr in zip(fpr,tpr,thres):
             if thr > 0 and thr < 1:
-                if args.model_type == "logisticregression":
+                if args.model_type == "logisticregression" or 'logistic' in str(args.model_instantiation).lower():
                     thr = -1 * math.log(1.0/thr-1)
                 roc_line = "At a threshold of {} expect FPR {} and TPR {}".format(thr,f,t)
                 log(roc_line)
