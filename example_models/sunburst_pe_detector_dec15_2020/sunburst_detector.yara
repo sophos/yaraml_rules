@@ -1,4 +1,4 @@
-rule solarwinds_detector
+rule sunburst_detector
 {
     strings:
 	$s0 = "OrionModuleEngineo" fullword // weight: 0.5694
