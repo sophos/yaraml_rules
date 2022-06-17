@@ -16,7 +16,7 @@ setuptools.setup(
     install_requires=[
         "joblib==0.17.0",
         "networkx==2.5",
-        "numpy==1.19.4",
+        "numpy==1.21.0",
         "pefile==2019.4.18",
         "scikit-learn==0.23.2",
         "scipy==1.5.4"
