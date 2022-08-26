@@ -62,5 +62,5 @@ We're providing research code here but will happily respond to questions and bug
   year = {2020},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/sophos-ai/yaraml_rules/}}
+  howpublished = {\url{https://github.com/sophos/yaraml_rules/}}
 }
