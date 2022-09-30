@@ -1,6 +1,6 @@
 networkx==1.11
 matplotlib==2.0.0
-joblib==0.14.1
+joblib==1.2.0
 numpy==1.12.1
 scipy==0.19.0
 pefile==2019.4.18
