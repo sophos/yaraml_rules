@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://ai.sophos.com",
     packages=setuptools.find_packages(),
     install_requires=[
-        "joblib==0.17.0",
+        "joblib==1.2.0",
         "networkx==2.5",
         "numpy==1.19.4",
         "pefile==2019.4.18",
