@@ -19,7 +19,7 @@ setuptools.setup(
         "numpy==1.19.4",
         "pefile==2019.4.18",
         "scikit-learn==0.23.2",
-        "scipy==1.5.4"
+        "scipy==1.10.0"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
